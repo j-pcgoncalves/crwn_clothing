@@ -1,4 +1,4 @@
-import './categories.styles.scss';
+import Directory from './components/directory/directory.component';
 
 const App = () => {
   const categories = [
@@ -30,7 +30,7 @@ const App = () => {
   ]
   
   return (
-    
+    <Directory categories={categories} />
   );
 }
 
