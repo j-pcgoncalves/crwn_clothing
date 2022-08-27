@@ -16,7 +16,6 @@ const App = () => {
         <Route path='shop' element={<Shop />} />
         <Route path='sign-in' element={<SignIn />} />
       </Route>
-      
     </Routes>
   );
 }
