@@ -52,10 +52,17 @@ export const CartProvider = ({ children }) => {
     }
 
     const removeItemFromCart = cartItemToRemove => {
-        setCartItems(addCartItem(cartItems, cartItemToRemove));
+        setCartItems(removeCartItem(cartItems, cartItemToRemove));
     }
 
-    const value = { isCartOpen, setIsCartOpen, addItemToCart, cartItems, cartCount };
+    const value = { 
+        isCartOpen, 
+        setIsCartOpen, 
+        addItemToCart, 
+        cartItems, 
+        cartCount,
+        removeItemFromCart 
+    };
 
     return <CartContext.Provider value={value}>{children}</CartContext.Provider>
 }
