@@ -70,7 +70,8 @@ export const CartProvider = ({ children }) => {
         addItemToCart, 
         cartItems, 
         cartCount,
-        removeItemFromCart 
+        removeItemFromCart,
+        clearItemFromCart
     };
 
     return <CartContext.Provider value={value}>{children}</CartContext.Provider>
