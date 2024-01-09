@@ -58,7 +58,11 @@ const SignInForm = () => {
     const signInWithGoogle = async () => {
         const { user } = await signInWithGooglePopup();
 
-        await createUserDocumentFromAuth(user);
+        if (user) {
+            await createUserDocumentFromAuth(user);
+            setCurrentUser(user);
+        }
+
     };
 
     return (
