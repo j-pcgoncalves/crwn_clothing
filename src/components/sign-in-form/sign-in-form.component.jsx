@@ -32,10 +32,15 @@ const SignInForm = () => {
 
             resetFormFields();
         } catch (error) {
-            if (error.code === "auth/invalid-credential") {
-                alert("Cannot Sign In, the entered credentials are wrong");
-            } else {
-                console.log("User Sign In encountered an error!", error);
+            switch (error.code) {
+                case "auth/invalid-credential":
+                    alert("Cannot Sign In! The entered credentials are wrong.");
+                    break;
+                case "auth/user-not-found":
+                    alert("No user found!");
+                    break;
+                default:
+                    console.log(error);
             }
         }
     };
@@ -54,7 +59,7 @@ const SignInForm = () => {
 
     return (
         <div className="sign-in-container">
-            <h2>Already have an account</h2>
+            <h2>Already have an account?</h2>
             <span>Sign in with your email and password</span>
             <form onSubmit={handleSubmit}>
                 <FormInput
@@ -78,6 +83,7 @@ const SignInForm = () => {
                 <div className="buttons-container">
                     <Button type="submit">Sign In</Button>
                     <Button 
+                        type="button"
                         buttonType="google" 
                         onClick={signInWithGoogle}>
                             Sign In With Google
