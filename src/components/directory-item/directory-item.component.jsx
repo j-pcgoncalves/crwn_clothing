@@ -1,9 +1,7 @@
 import {
     DirectoryItemContainer,
     BackgroundImage,
-    Body,
-    H2,
-    P
+    Body
 } from "./directory-item.styles";
 
 const DirectoryItem = ({ category }) => {
@@ -11,12 +9,10 @@ const DirectoryItem = ({ category }) => {
 
     return (
         <DirectoryItemContainer>
-            <BackgroundImage style={{ 
-                backgroundImage: `url(${imageUrl})` 
-            }} />
+            <BackgroundImage imageUrl={imageUrl} />
             <Body>
-                <H2>{title}</H2>
-                <P>Shop Now</P>
+                <h2>{title}</h2>
+                <p>Shop Now</p>
             </Body>
         </DirectoryItemContainer>
     );
