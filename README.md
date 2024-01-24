@@ -4,7 +4,7 @@ This is a simple E-Commerce built in React. It integrates with Firebase, for Goo
 
 ## How to Use
 
-If you wish to run this project on your own computer you can clone it. After that you just need to create a folder inside utils named "firebase" and inside create a file named firebase.utils.js in where you will copy all the code necessary to integrate with Firebase (you will need to create your own project with your google account in firebase console).
+If you wish to run this project on your own computer you can clone it. After that you just need to create a folder inside utils named "firebase" and inside create a file named firebase.utils.js in where you will copy all the code necessary to integrate with Firebase (you will need to create your own project with your google account in firebase console). Done with that, you can write in your terminal "npm start" to start the development server.
 
 ## Credits
 
